@@ -1,0 +1,369 @@
+/*
+    Notice:
+        01 注释只能用多行注释，单行注释会出错
+*/
+/*******定义字体，背景颜色*********/
+*{
+    font: "微软雅黑";
+    color: rgb(220, 220, 220);
+    background-color: rgb(68, 68, 68);
+    border-radius: 2px;
+    padding: 3px;
+    margin: 2px;
+}
+/****************定义边框*****************/
+QLineEdit, QPushButton, QTimeEdit,
+QSpinBox, QDoubleSpinBox, QComboBox,
+QDateEdit, QDateTimeEdit, QGroupBox,
+QTextEdit{
+    border:1px solid rgb(36, 36, 36);
+}
+/*************菜单下拉按钮*****************/
+QMenu::item {
+    background-color: transparent;
+}
+/********菜单下拉按钮（被选择时）***********/
+QMenu::item:selected {
+    background-color: rgb(100, 100, 100);
+}
+/****************定义菜单栏***************/
+QMenuBar {
+    border-radius: 0;
+    background-color: rgb(72, 72, 72);
+    border-bottom: 1px solid rgb(36, 36, 36);
+}
+/************菜单栏按钮（被选择时）********/
+QMenuBar::item:selected {
+    background-color: rgb(100, 100, 100);
+}
+/************菜单栏按钮（鼠标悬停）********/
+QMenu:hover {
+    background-color: rgb(100, 100, 100);
+}
+/*********按钮（渐变：突出显示）***********/
+QPushButton {
+    border-style: inset;
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(72, 72, 72, 255), stop:1 rgba(56, 56, 56, 255));
+    border:1px solid rgb(36, 36, 36);
+    border-radius: 6px;
+    min-width: 5em;
+    min-height: 1em;
+    padding: 6px 6px;
+    margin: 5px
+}
+/**************按钮（鼠标悬停）**********/
+QPushButton:hover {
+    background-color: rgb(91, 91, 91);
+}
+/**************按钮（按下）*************/
+QPushButton:pressed  {
+    background-color: rgb(68, 68, 68);
+}
+/*********定义textbrower背景**************/
+QTextBrowser  {
+    background-color: rgb(57, 58, 60);
+}
+
+/*********定义Slider槽的形态**************/
+QSlider::groove:horizontal {
+    height: 6px;
+    border-radius: 3px;
+}
+/*********定义Slider柄的形态**************/
+QSlider::handle:horizontal {
+    background-color: rgb(68, 68, 68);
+    border-radius: 5px;
+    border: 2px solid rgb(36, 36, 36);
+    height: 8px;
+    width: 8px;
+    margin: -3px -3px;
+}
+/*********定义handle右边的背景**************/
+QSlider::add-page:horizontal{
+    background: rgb(72, 72, 72);
+}
+/*********定义handle左边的背景**************/
+QSlider::sub-page:horizontal{
+    background: rgb(36, 36, 36);
+}
+
+/****************定义进度条****************/
+
+/*************定义进度条背景**************/
+/**********状态栏**********/
+/**********进度条**********/
+QProgressBar{
+        border: none;
+        text-align: center;
+        color: white;
+        background: rgb(48, 50, 51);
+}
+QProgressBar::chunk {
+        background: rgb(0, 160, 230);
+}
+
+QProgressBar#progressBar {
+		border: none;
+		text-align: center;
+		color: white;
+		background-color: transparent;
+		background-image: url(":/Black/progressBar");
+		background-repeat: repeat-x;
+}
+QProgressBar#progressBar::chunk {
+		border: none;
+		background-color: transparent;
+		background-image: url(":/Black/progressBarChunk");
+		background-repeat: repeat-x;
+}
+
+
+/**********分组框**********/
+QTabWidget::pane {
+		border: none;
+		
+		background: rgb(255, 255, 255, 30);
+}
+QTabWidget::tab-bar {
+		border: none;
+}
+QTabBar::tab {
+		border: none;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		color: rgb(175, 175, 175);
+		background: rgb(255, 255, 255, 30);
+		height: 28px;
+		min-width: 85px;
+		margin-right: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+}
+QTabBar::tab:hover {
+		background: rgb(255, 255, 255, 40);
+}
+QTabBar::tab:selected {
+		color: white;
+		
+}
+
+
+
+/*************QComboBox******************/
+
+
+/**********表头**********/
+QHeaderView{
+        border: none;
+        
+        
+        background: rgb(57, 58, 60);
+        min-height: 30px;
+}
+
+QTableCornerButton::section {
+        border: none;
+        color: white;
+        background: rgb(57, 58, 60);
+        padding-left: 5px;
+}
+QTableCornerButton::section:hover {
+        background: rgb(0, 160, 230);
+}
+QTableCornerButton::section:pressed {
+        background: rgb(0, 180, 255);
+}
+QHeaderView::section:horizontal {
+        border: none;
+        color: white;
+        background: transparent;
+        padding-left: 5px;
+        border-bottom: 3px solid rgb(0, 160, 230);
+}
+
+QHeaderView::section:horizontal:hover {
+        background: rgb(0, 160, 230);
+}
+QHeaderView::section:horizontal:pressed {
+        background: rgb(0, 180, 255);
+}
+QHeaderView::section:vertical {
+        border: none;
+        color: white;
+        background: transparent;
+        padding-left: 5px;
+        border-right: 3px solid rgb(0, 160, 230);
+}
+QHeaderView::section:vertical:hover {
+        background: rgb(0, 160, 230);
+}
+QHeaderView::section:vertical:pressed {
+        background: rgb(0, 180, 255);
+}
+QHeaderView::up-arrow {
+        width: 13px;
+        height: 11px;
+        padding-right: 5px;
+        image: url(:/Black/topArrow);
+        subcontrol-position: center right;
+}
+QHeaderView::up-arrow:hover, QHeaderView::up-arrow:pressed {
+        image: url(:/Black/topArrowHover);
+}
+QHeaderView::down-arrow {
+        width: 13px;
+        height: 11px;
+        padding-right: 5px;
+        image: url(:/Black/bottomArrow);
+        subcontrol-position: center right;
+}
+QHeaderView::down-arrow:hover, QHeaderView::down-arrow:pressed {
+        image: url(:/Black/bottomArrowHover);
+}
+
+/**********表格**********/
+QTableView {
+        border: 1px solid rgb(45, 45, 45);
+        background: rgb(57, 58, 60);
+        gridline-color: rgb(60, 60, 60);
+}
+QTableView::item {
+        padding-left: 5px;
+        padding-right: 5px;
+        border: none;
+        background: rgb(72, 72, 74);
+        border-right: 1px solid rgb(45, 45, 45);
+        border-bottom: 1px solid rgb(45, 45, 45);
+}
+QTableView::item:selected {
+        background: rgba(255, 255, 255, 40);
+}
+QTableView::item:selected:!active {
+        color: white;
+}
+QTableView::indicator {
+        width: 20px;
+        height: 20px;
+}
+
+
+/**********滚动条-水平**********/
+QScrollBar:horizontal {
+        height: 20px;
+        background: transparent;
+        margin-top: 3px;
+        margin-bottom: 3px;
+}
+QScrollBar::handle:horizontal {
+        height: 20px;
+        min-width: 30px;
+        background: rgb(68, 69, 73);
+        margin-left: 15px;
+        margin-right: 15px;
+}
+QScrollBar::handle:horizontal:hover {
+        background: rgb(80, 80, 80);
+}
+QScrollBar::sub-line:horizontal {
+        width: 15px;
+        background: transparent;
+        image: url(:/Black/arrowLeft);
+        subcontrol-position: left;
+}
+QScrollBar::add-line:horizontal {
+        width: 15px;
+        background: transparent;
+        image: url(:/Black/arrowRight);
+        subcontrol-position: right;
+}
+QScrollBar::sub-line:horizontal:hover {
+        background: rgb(68, 69, 73);
+}
+QScrollBar::add-line:horizontal:hover {
+        background: rgb(68, 69, 73);
+}
+QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal {
+        background: transparent;
+}
+
+/**********滚动条-垂直**********/
+QScrollBar:vertical {
+        width: 20px;
+        background: transparent;
+        margin-left: 3px;
+        margin-right: 3px;
+}
+QScrollBar::handle:vertical {
+        width: 20px;
+        min-height: 30px;
+        background: rgb(68, 69, 73);
+        margin-top: 15px;
+        margin-bottom: 15px;
+}
+QScrollBar::handle:vertical:hover {
+        background: rgb(80, 80, 80);
+}
+QScrollBar::sub-line:vertical {
+        height: 15px;
+        background: transparent;
+        image: url(:/Black/arrowTop);
+        subcontrol-position: top;
+}
+QScrollBar::add-line:vertical {
+        height: 15px;
+        background: transparent;
+        image: url(:/Black/arrowBottom);
+        subcontrol-position: bottom;
+}
+QScrollBar::sub-line:vertical:hover {
+        background: rgb(68, 69, 73);
+}
+QScrollBar::add-line:vertical:hover {
+        background: rgb(68, 69, 73);
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+        background: transparent;
+}
+
+QScrollBar#verticalScrollBar:vertical {
+        margin-top: 30px;
+}
+
+
+/*********下拉列表的item背景***************/
+QComboBox QAbstractItemView {
+    border: 0px;
+    selection-background-color: rgb(100, 100, 100);
+}
+#button_close{
+	background: transparent;
+	color: #D6D6D7;
+	font-size: 16px;
+	border: none;
+}
+
+#button_close:hover{
+	background: #E81123;
+	color: #FFF;
+}
+
+#button_min{
+	background: transparent;
+	color: #FFF;
+	font-size: 18px;
+	border: none;
+}
+
+#button_min:hover{
+	background: #1874CD;
+	color: #FFFFFF;
+}
+
+#centralwidget{
+	
+}
+
+#title_frame{
+	font-size: 22px;
+	
+}
